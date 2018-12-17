@@ -57,6 +57,12 @@ public class Toast extends ReactContextBaseJavaModule implements LifecycleEventL
         });
     }
 
+    
+    @Override
+    public boolean canOverrideExistingModule() {
+      return true;
+    }
+    
     @ReactMethod
     public void hide() throws Exception {
         if (mostRecentToast != null) {
